@@ -36,10 +36,10 @@ public class MainUI {
                    new FilmesUI(listaFilmes).executar();
                     break;
                 case MainMenu.OP_SALAS:
-                   // new SalasUI(listaSalas).executar();
+                   new SalasUI(listaSalas).executar();
                     break;
                 case MainMenu.OP_SECOES:
-                   // new SecoesUI(listaFilmes,listaSalas,listaSecao).executar();
+                   new SecoesUI(listaFilmes,listaSalas,listaSecao).executar();
                     break;
                 case MainMenu.OP_VENDA:
                   //  new VendaUI(listaSecao).executar();

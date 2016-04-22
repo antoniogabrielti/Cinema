@@ -14,6 +14,10 @@ public class DateUtil {
     {
         return(new SimpleDateFormat("dd/MM/yyyy").parse(data));
     }
+    public static Date stringToHour(String data) throws ParseException
+    {
+        return(new SimpleDateFormat("HH:mm").parse(data));
+    }
 
     public static Date stringToDateHour(String data) throws ParseException
     {
@@ -23,7 +27,9 @@ public class DateUtil {
     public static String dateToString(Date data){
         return(new SimpleDateFormat("dd/MM/yyyy").format(data));
     }
-
+    public static String hourToString(Date data){
+        return(new SimpleDateFormat("HH:mm").format(data));
+    }
     public static String dateHourToString(Date data){
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         String dataString = formatador.format(data);
