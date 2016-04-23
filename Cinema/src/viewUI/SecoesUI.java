@@ -45,6 +45,12 @@ private RepositorioSecao listaSecao;
                 case SecoesMenu.OP_BUSCASALA:
                     buscaSecoesPorSala();
                     break;
+                case SecoesMenu.OP_FILMESTOP:
+                    MostraFilmesEmMaisSecoes();
+                    break;
+                case SecoesMenu.OP_SALASTOP:
+                    MostraSalasEmMaisSecoes();
+                    break;
                 case SecoesMenu.OP_VOLTAR:
                     System.out.println("Retornando ao menu principal..");
                     break;
@@ -184,5 +190,15 @@ private RepositorioSecao listaSecao;
         }else{
             System.out.println("Nenhuma Secao foi encontrada para esta sala!!!");
         }  
+    }
+
+    private void MostraFilmesEmMaisSecoes() {
+        System.out.println("************ Relatório de filmes - Numero de Secoes ***********");
+        listaSecao.FilmesEmMaisSecoes();
+    }
+
+    private void MostraSalasEmMaisSecoes() {
+        System.out.println("************ Relatório de Salas - Numero de Secoes ***********");
+        listaSecao.SalasEmMaisSecoes();
     }
 }

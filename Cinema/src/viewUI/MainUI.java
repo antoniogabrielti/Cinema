@@ -42,7 +42,7 @@ public class MainUI {
                    new SecoesUI(listaFilmes,listaSalas,listaSecao).executar();
                     break;
                 case MainMenu.OP_VENDA:
-                  //  new VendaUI(listaSecao).executar();
+                  new VendaUI(listaSecao,listaVenda,listaFilmes,listaSalas).executar();
                     break;
                 case MainMenu.OP_SAIR:
                     System.out.println("Aplicação finalizada!!!");
