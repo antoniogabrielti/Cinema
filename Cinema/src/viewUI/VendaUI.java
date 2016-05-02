@@ -96,14 +96,18 @@ class VendaUI {
                 int qtdCompra=0;
                 do{
                     qtdCompra = Console.scanInt("Digite a quantidade de ingressos para a compra:");
-                    if(qtdCompra<=SecaoEscolhida.getQtdDisponivel()){
+                    if(qtdCompra<=SecaoEscolhida.getQtdDisponivel() && qtdCompra>0){
                         Date DataHoraCompra = new Date();
                         listaVenda.addVenda(new Venda(SecaoEscolhida,qtdCompra,DataHoraCompra));
                         SecaoEscolhida.setQtdDisponivel(qtdCompra);
                         comprou=true;
                         System.out.println("Sua compra foi realizada com sucesso!!!");
                     }else{
+                        if(qtdCompra<=0){
+                            System.out.println("Quantidade Invalida!!!");
+                        }else{
                          System.out.println("Quantidade ultrapassa o número de ingressos disponiveis!!!");
+                        }
                     }
                 }while(qtdCompra>SecaoEscolhida.getQtdDisponivel());
             }else{
@@ -142,7 +146,7 @@ class VendaUI {
                 + String.format("%-20s", "|SALA DA SECAO") + "\t"
                 + String.format("%-20s", "|HORARIO DA SECAO") + "\t"
                 + String.format("%-20s", "|QUANTIDADE COMPRADO"));
-        for (Venda V : listaVenda.getListaVenda()) {
+        for (Venda V : VendasEncontrada) {
             String DataHoraCompra = DateUtil.dateHourToString(V.getDataHora());
             String HoraSecao = DateUtil.hourToString(V.getSecao().getDataHora());
             System.out.println(String.format("%-10s", DataHoraCompra) + "\t"

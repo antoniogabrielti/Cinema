@@ -15,7 +15,7 @@ public class SecoesMenu {
                 + "1- Cadastrar secao\n"
                 + "2- Listar secoes\n"
                 + "3- Buscar secoes por filme\n"
-                + "4- Buscar secoes por data e horario\n"
+                + "4- Buscar secoes por horario\n"
                 + "5- Buscar secoes por sala\n"
                 + "6- Filmes em mais secoes\n"
                 + "7- Salas em mais secoes\n"

@@ -12,9 +12,9 @@ public class VendaMenu {
         return ("\n--------------------------------------\n"
                 + "1- Cadastrar venda\n"
                 + "2- Listar vendas\n"
-                + "3- Buscar secoes por filme\n"
-                + "4- Buscar secoes por data e horario\n"
-                + "5- Buscar secoes por sala\n"
+                + "3- Buscar vendas por filme\n"
+                + "4- Buscar vendas por horario\n"
+                + "5- Buscar vendas por sala\n"
                 + "0- Voltar"
                 + "\n--------------------------------------");
     }        
