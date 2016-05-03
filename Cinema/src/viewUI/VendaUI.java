@@ -67,12 +67,14 @@ class VendaUI {
                 + String.format("%-20s", "|FILME") + "\t"
                 + String.format("%-20s", "|GENERO"));
         for (Secao S : listaSecao.getListaSecoes()) {
+            if(S.getQtdDisponivel()>0){
             String horario = DateUtil.hourToString(S.getDataHora());
             System.out.println(String.format("%-10s", S.getSala().getNumero()) + "\t"
                     + String.format("%-20s", "|" + horario) + "\t"
                     + String.format("%-20s", "|" + S.getQtdDisponivel()+" ingressos") + "\t"
                     + String.format("%-20s", "|" + S.getFilme().getNome()) + "\t"
                     + String.format("%-20s", "|" + S.getFilme().getGenero()));
+            }
         }
         Secao SecaoEscolhida=null;
         int Num_Sala = Console.scanInt("Informe o numero da sala da secao escolhida: ");
@@ -109,11 +111,11 @@ class VendaUI {
                          System.out.println("Quantidade ultrapassa o número de ingressos disponiveis!!!");
                         }
                     }
-                }while(qtdCompra>SecaoEscolhida.getQtdDisponivel());
+                }while(comprou==false);
             }else{
                 System.out.println("Voce informou uma secao que não existe em nosso catalogo!!!");
             }
-        }while(comprou=false);
+        }while(comprou==false);
     }
 
     private void mostrarVendas() {
